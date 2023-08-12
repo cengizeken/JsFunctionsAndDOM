@@ -17,7 +17,13 @@ const myNameElement = document.querySelector('#nameElement');
 //console.log(myNameElement);
 
 let newName = 'Hasan';
+let last = 'Çelik'
 myNameElement.innerText  = newName;
+
+const myLastNameElement = document.getElementById('lastNameElement');
+console.log(myLastNameElement);
+
+myLastNameElement.innerHTML=`<h1>${last}</h1>`;
 
 const pElementId = document.getElementById('pTagId');
 //console.log(pElementId);
@@ -29,3 +35,10 @@ const divElementId = document.querySelector('#divId');
 
 const divElementClass = document.querySelector('.divClass');
 //console.log(divElementClass);
+
+const changeName = (willName) =>{
+    myNameElement.innerText = `${willName}`
+};
+myNameElement.addEventListener("click",()=>{
+    changeName('Ayzıt');
+})
